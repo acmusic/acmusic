@@ -98,7 +98,7 @@ class acmusic_Programs extends WP_Widget {
 		ob_start();
 		extract($args);
 
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Our Programs', 'acmusic' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Current Productions', 'acmusic' );
 
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 		$image_uri = isset( $instance['image_uri'] ) ? esc_url($instance['image_uri']) : '';
@@ -148,7 +148,6 @@ class acmusic_Programs extends WP_Widget {
             <div style="border-color: <?php echo $color; ?>" class="program-bottom-line"></div>
 					</div>
 				<?php endwhile; ?>
-        <div class="col-md-12 programs-bottom-border"></div>
 			</div>
 			<?php if ($see_all != '') : ?>
 				<a href="<?php echo esc_url($see_all); ?>" class="all-news">
